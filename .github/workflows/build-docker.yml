@@ -1,5 +1,4 @@
 name: React CI/CD
-
 on:
   push:
     branches: [master]
@@ -16,7 +15,7 @@ jobs:
           registry: ${{ secrets.ACR_REGISTER }}
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
-      - name: Build and push Docker Image
+      - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
           context: .
